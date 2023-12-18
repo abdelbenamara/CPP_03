@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 17:48:40 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 15:27:00 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 16:39:45 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 
 FragTrap::FragTrap(FragTrap const &src) : ClapTrap(src)
 {
-	*this = src;
 	std::cout << "FragTrap " << *this;
 	std::cout << " copy constructor called" << std::endl;
 
