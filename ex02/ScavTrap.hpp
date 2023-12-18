@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 15:59:10 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/17 16:53:13 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 15:26:03 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 class ScavTrap : public ClapTrap
 {
 public:
-	ScavTrap();
+	ScavTrap(void);
 	ScavTrap(std::string name);
 	ScavTrap(ScavTrap const &src);
-	~ScavTrap();
+	~ScavTrap(void);
 
 	ScavTrap &operator=(ScavTrap const &rhs);
 
