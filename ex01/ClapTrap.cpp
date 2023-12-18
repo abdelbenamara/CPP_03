@@ -6,16 +6,16 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 12:16:38 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/17 17:23:20 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 15:15:03 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : name("unnamed"),
-					   hitPoints(10),
-					   energyPoints(10),
-					   attackDamage(0)
+ClapTrap::ClapTrap(void) : name("unnamed"),
+						   hitPoints(10),
+						   energyPoints(10),
+						   attackDamage(0)
 {
 	std::cout << "ClapTrap " << *this;
 	std::cout << " default constructor called" << std::endl;
@@ -43,7 +43,7 @@ ClapTrap::ClapTrap(ClapTrap const &src)
 	return;
 }
 
-ClapTrap::~ClapTrap()
+ClapTrap::~ClapTrap(void)
 {
 	std::cout << "ClapTrap " << *this << " destructor called" << std::endl;
 
@@ -54,10 +54,10 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
 {
 	if (this != &rhs)
 	{
-		this->setName(rhs.getName());
-		this->setHitPoints(rhs.getHitPoints());
-		this->setEnergyPoints(rhs.getEnergyPoints());
-		this->setAttackDamage(rhs.getAttackDamage());
+		this->name = rhs.getName();
+		this->hitPoints = rhs.getHitPoints();
+		this->energyPoints = rhs.getEnergyPoints();
+		this->attackDamage = rhs.getAttackDamage();
 	}
 
 	return *this;
