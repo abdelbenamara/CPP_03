@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 12:07:35 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/17 16:41:33 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 15:14:33 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 class ClapTrap
 {
 public:
-	ClapTrap();
+	ClapTrap(void);
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap const &src);
-	~ClapTrap();
+	~ClapTrap(void);
 
 	ClapTrap &operator=(ClapTrap const &rhs);
 
