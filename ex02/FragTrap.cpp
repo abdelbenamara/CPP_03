@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 17:48:40 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/17 17:56:52 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 14:33:22 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,7 @@ FragTrap::~FragTrap()
 
 FragTrap &FragTrap::operator=(FragTrap const &rhs)
 {
-	if (this != &rhs)
-	{
-		this->setName(rhs.getName());
-		this->setHitPoints(rhs.getHitPoints());
-		this->setEnergyPoints(rhs.getEnergyPoints());
-		this->setAttackDamage(rhs.getAttackDamage());
-	}
+	ClapTrap::operator=(rhs);
 
 	return *this;
 }
