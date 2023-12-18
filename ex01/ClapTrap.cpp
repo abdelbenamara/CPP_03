@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 12:16:38 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 15:15:03 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 16:29:01 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
 {
 	if (this != &rhs)
 	{
-		this->name = rhs.getName();
-		this->hitPoints = rhs.getHitPoints();
-		this->energyPoints = rhs.getEnergyPoints();
-		this->attackDamage = rhs.getAttackDamage();
+		this->name = rhs.name;
+		this->hitPoints = rhs.hitPoints;
+		this->energyPoints = rhs.energyPoints;
+		this->attackDamage = rhs.attackDamage;
 	}
 
 	return *this;
