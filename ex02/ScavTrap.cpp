@@ -6,13 +6,13 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:11:45 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 14:32:32 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 15:26:09 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap()
+ScavTrap::ScavTrap(void) : ClapTrap()
 {
 	this->setHitPoints(100);
 	this->setEnergyPoints(50);
@@ -43,7 +43,7 @@ ScavTrap::ScavTrap(ScavTrap const &src) : ClapTrap(src)
 	return;
 }
 
-ScavTrap::~ScavTrap()
+ScavTrap::~ScavTrap(void)
 {
 	std::cout << "ScavTrap " << *this;
 	std::cout << " destructor called" << std::endl;
