@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 17:48:40 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 16:39:45 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/22 17:45:45 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 FragTrap::FragTrap(void) : ClapTrap()
 {
-	this->setHitPoints(100);
-	this->setEnergyPoints(100);
-	this->setAttackDamage(30);
 	std::cout << "FragTrap " << *this;
 	std::cout << " default constructor called" << std::endl;
+	this->hitPoints = 100;
+	this->energyPoints = 100;
+	this->attackDamage = 30;
 
 	return;
 }
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name)
+FragTrap::FragTrap(std::string const &name) : ClapTrap(name)
 {
-	this->setHitPoints(100);
-	this->setEnergyPoints(100);
-	this->setAttackDamage(30);
 	std::cout << "FragTrap " << *this;
 	std::cout << " name constructor called" << std::endl;
+	this->hitPoints = 100;
+	this->energyPoints = 100;
+	this->attackDamage = 30;
 
 	return;
 }
@@ -60,7 +60,7 @@ FragTrap &FragTrap::operator=(FragTrap const &rhs)
 void FragTrap::highFivesGuys(void)
 {
 	std::cout << "\033[1;35m";
-	std::cout << "FragTrap " << this->getName();
+	std::cout << "FragTrap " << this->name;
 	std::cout << " gives high fives!";
 	std::cout << "\033[0m" << std::endl;
 
